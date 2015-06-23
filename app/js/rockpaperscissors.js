@@ -5,7 +5,7 @@
 
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.")
-    return prompt();
+    return true;
 }
 function randomPlay() {
     var randomNumber = Math.random();
@@ -78,7 +78,7 @@ function playToFive() {
     var playerWins = 0;
     var computerWins = 0;
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
-    while (playerWins !=== 5 || computerWins !=== 5)
+    while (playerWins !== 5 || computerWins !== 5)
     {
 
       if(getWinner(getPlayerMove(getInput()),getComputerMove(randomPlay())) ===
