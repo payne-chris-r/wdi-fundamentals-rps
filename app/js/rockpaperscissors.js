@@ -5,7 +5,7 @@
 
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.")
-    return true;
+    return prompt();
 }
 function randomPlay() {
     var randomNumber = Math.random();
@@ -24,14 +24,7 @@ function randomPlay() {
 function getPlayerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
-    if(move == '')
-    {
-      return getInput();
-    }
-    else
-    {
-      return move;
-    }
+    return getInput();
 }
 
 function getComputerMove(move) {
@@ -52,7 +45,7 @@ function getWinner(playerMove,computerMove) {
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     if(playerMove === computerMove)
     {
-      return tie;
+      return 'tie';
     }
     else
     {
@@ -81,7 +74,7 @@ function playToFive() {
     while (playerWins !== 5 || computerWins !== 5)
     {
 
-      if(getWinner(getPlayerMove(getInput()),getComputerMove(randomPlay())) ===
+      if(getWinner(getPlayerMove(getInput()), getComputerMove(randomPlay())) ===
         'player')
       {
         playerWins++;
